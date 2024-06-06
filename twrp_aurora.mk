@@ -17,7 +17,7 @@ $(call inherit-product, device/xiaomi/aurora/device.mk)
 PRODUCT_DEVICE := aurora
 PRODUCT_NAME := twrp_aurora
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi 14 Ultra
+PRODUCT_MODEL := Redmi Turbo3
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
