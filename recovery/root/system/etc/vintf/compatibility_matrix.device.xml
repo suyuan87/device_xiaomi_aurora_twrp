@@ -2,6 +2,7 @@
     Input:
         vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
         vendor/xiaomi/proprietary/misys/vendor_framework_compatibility_matrix.xml
+        vendor/xiaomi/proprietary/memory_tools/cld/vintf/vendor_framework_compatibility_matrix.xml
         vendor/qcom/opensource/commonsys/audio/ozo/vendor_framework_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/sensor_tools/vendor.xiaomi.sensor.citsensorservice.aidl_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/sensor_tools/vendor.xiaomi.sensor.communicate@1.0_compatibility_matrix.xml
@@ -47,6 +48,8 @@
         device/xiaomi/missi/device_framework_compatibility_matrix/tempfix_bb/hardware/vendor_framework_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/mrm/hidl/vendor_framework_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/mrm/aidl/vendor_framework_compatibility_matrix.xml
+        device/xiaomi/missi/device_framework_compatibility_matrix/micar/interfaces/vehiclecore/vendor_framework_compatibility_matrix.xml
+        device/xiaomi/missi/device_framework_compatibility_matrix/bluetooth/qssi_vendor_framework_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/mitrustedui/vendor_framework_compatibility_matrix.xml
         vendor/xiaomi/proprietary/display/common/interfaces/vendor_framework_compatibility_matrix.xml
         device/xiaomi/missi/device_framework_compatibility_matrix/miAON/vendor_framework_compatibility_matrix.xml
@@ -75,6 +78,15 @@
         <interface>
             <name>IEvsEnumerator</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.bluetooth</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+            <instance>hci1</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -325,6 +337,13 @@
         <version>1.0</version>
         <interface>
             <name>INordic</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.micar.hardware.vehiclecore</name>
+        <interface>
+            <name>IMiVehicleCore</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1555,7 +1574,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.qesdhal</name>
-        <version>1.0-3</version>
+        <version>1.0-4</version>
         <interface>
             <name>IQesdhal</name>
             <instance>default</instance>
@@ -1711,6 +1730,14 @@
         <version>1.0</version>
         <interface>
             <name>ICitVendorService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.cld</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICld</name>
             <instance>default</instance>
         </interface>
     </hal>
